@@ -1,1 +1,10 @@
-events#index page
+<% @events.each do |event| %>
+<%= link_to("#{event.name}, #{event.city}", event_path(event)) %><br />
+<% end %>
+
+<p>
+  <%= link_to 'New Event', new_event_path%>
+</p>
+<p>
+<%= link_to "Back", root_path %>
+</p>
